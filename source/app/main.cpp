@@ -37,14 +37,16 @@
 #include "gpio.h"
 #include "led.h"
 
+static volatile uint8_t __attribute__((used, section(".ccmram"))) g_ccram_buffer[32*1024] = { 0xDC };
+
 void main_task(void *pvParameters)
 {
     (void)pvParameters;
-    static uint32_t counter = 0;
+    static uint32_t* pCounter = (uint32_t*)g_ccram_buffer;
 
     for (;;) {
         vTaskDelay(1000 / portTICK_PERIOD_MS);
-        printf("Blink %lu!\n", counter++);
+        printf("Blink %lu!\n", (*pCounter)++);
     }
 }
 
