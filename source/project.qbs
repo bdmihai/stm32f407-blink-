@@ -35,7 +35,7 @@ Project {
     references: [
         'boot/boot.qbs',
         'cmsis/cmsis.qbs',
-        //'hal/hal.qbs',
+        'hal/hal.qbs',
         'runtime/runtime.qbs',
         'freertos/freertos.qbs',
         'app/app.qbs'

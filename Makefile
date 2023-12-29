@@ -28,7 +28,7 @@
 CONFIG_MCU                  = STM32F407VG
 CONFIG_OPENOCD              = /usr/local/bin/openocd
 CONFIG_OPENOCDCONFIGDIR     = /usr/local/share/openocd/scripts
-CONFIG_OPENOCD_INTERFACE    = interface/stlink.cfg
+CONFIG_OPENOCD_INTERFACE    = interface/stlink-v3.cfg
 CONFIG_OPENOCD_BOARD        = board/stm32f407xx.cfg
 
 .PHONY: all build clean
